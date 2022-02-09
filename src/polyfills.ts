@@ -47,6 +47,15 @@
  */
 import 'zone.js';  // Included with Angular CLI.
 
+// Internet Explorer 11 (IE11) Support:
+import 'core-js/es/typed-array';
+import 'core-js/es/object';
+
+// Add global nad process
+(window as any).global = window;
+(window as any).process = {
+  env: { DEBUG: undefined },
+};
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
